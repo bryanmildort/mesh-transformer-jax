@@ -884,3 +884,781 @@ PMH/PSH/Allergies/ medication: none
 
 SH: student, uses condom when sexually active, No use of cigarette, recreational drugs. 2 beers per month
 [Diagnosis]: Acute Abdominal Pain
+[Notes]: Patient is a 17 y/o M who presents with 1-day history of sharp chest pain on left anterior chest that is aggravated by movement and deep breathing. He also reports feeling warm the past 3-4 days, as well as having diffuse muscle aches and stuffy nose w/ nonbloody discharge.  He has never had pain like this before. Tylenol and albuterol inhaler do not relieve the pain. He dnies any cough, wheezing, SOB, palpitations, weakness, headaches, abdominal pain, N/V, or change in appetite.
+
+PMH: Exercise induced asthma
+
+Meds: Albuterol inhaler, last used 6 months ago
+
+Allergies: NKDA
+
+Surgeries: none
+
+FH: Asthma, high cholesterol in father; paternal grandfather had heart attack but is alive
+
+SH: 1-2 beers/month at parties, has smoke marijuana a few times. No tobacco use. Sexually active w/ girlfriend, uses condoms consistently. Senior at high school and works a carpenter assistant. Rock climbs for exercise. Lives with parents and brother.
+
+
+[Diagnosis]: Chest Pain
+[Notes]: HPI: This is a 44 year old woman with a hx of high blood pressure who presents with "unpredictable periods." Her symptoms started 3 years ago. He period prior to this time were 28-29 days apart, lasting 4 days with "normal flow" accompanied by PMS symptoms. Now they have unpredicatable intervals and can last 2-6 days with either light or heavy flow. She also has had hot flashes for 1 year. She has no hx of cancer, surgeries. She has had 2 prior pregnancies without complications and has used a copper IUD for 20 years since then, which was replaced 4 years ago.
+
+
+
+PMH: HTN
+
+
+
+PSH: None
+
+
+
+Meds: HCTZ
+
+Allergies: None
+
+SHx: Lives at home with husband and two children. Feels safe at home. Does not smoke. Two uncomplicated pregnancies. First menstrual period at 14. 
+
+FHx: Mother has osteoarthritis and obesity, brother has HTN
+
+
+[Diagnosis]: Abnormal Uterine Bleeding
+[Notes]: HPI: Mr. Hilton is a 35 yo M comes in c/o mid-episgastric pain for the last 2 months. He reports this pain has been coming and going but recently has worsened. He reports the pain as gnawing and burning in nature that was relieved by TUMS at one point but is no longer getting relief. He says the pain is 5/10. He reports associated nausea, darker stool colors and a "bloating feeling." He also hasn't wanted to eat due to this pain, but meals do not affect pain. This pain has also awoken him from sleep several times. He denies history of reflux, weight changes, fever, chills, vomiting, blood in stools, or night sweats.
+
+ROS: Negative except above.
+
+PMHx: Back aches relieved with Motrin. NKDA. Denies surgical history.
+
+Meds: TUMS and Motrin.
+
+FHx: Uncle with a bleeding stomach ulcer. 
+
+SH: Discontinued drinking since it worsened the pain per patient. 20 pack year history of tobacco smoking. Unwilling to quit at this time. Denies drugs.
+
+
+[Diagnosis]: Dyspepsia
+[Notes]: ID: 20 yo female with sudden onset headache
+
+HPI: patient describes a sudden onset, worsening headache over last 24hrs with a dull, constant pain throughout her head. The headache is worsening over time and not relieved with tylenol or ibuprofen. She has been experiencing frequent nausea and vomiting, and has felt febrile. The headache is worsened by bright lights and bending forward (for example when tying shoelaces). She has never had prior headaches and this is the worst headache of her life. No vision changes, no focal neurological deficits, no aura phenomenon. 
+
+PMHx: nil
+
+Meds: OCP
+
+All: NKDA
+
+PSHx: nil 
+
+FHx: mother has migraines 
+
+SHx: non smoker, 2-3 drinks on weekends
+[Diagnosis]: Migraine Headache
+[Notes]: HPI: 44 yo F presenting with irregular periods. Reports over past 3 years her periods have become irregular, ranging in duration from 2-6 days with variable flow, and having anywhere from 3 weeks to 4 months between them. Previously she was regular with periods every 28-29 days. Also reports occasional sweating, 1-2 episodes of hot flashes per month over the past year, difficulty staying asleep in the early morning 4-5x over the past 3 months, and one episode of heavy night sweats. Also reports vaginal dryness x1 year with mildly uncomfortable intercourse, has started using a lubricant. Denies any dysuria, hematuria, weight loss, palpitations, headaches, visual problems, cough, or fevers.
+
+ROS: per HPI
+
+PMH: HTN
+
+PSH: denies
+
+All: NKA
+
+Meds: HCTZ
+
+FH: HTN, OA
+
+Soc: rare etoh use, denies smoking or drug use, sexually active with husband
+
+Menstrual hx: menarche at age 14, regular periods every 28-29 days till recently, G2P2 with 2 sons
+[Diagnosis]: Abnormal Uterine Bleeding
+[Notes]: 45F w no PMH p/w 2-3 weeks of episodes of nervousness, she denies, chest pain, palpations or SOB. pt recently began lecturing in front of studens as she is an english professor. In addition, she is caretaker for her mother and has responsibilities associated with caretaking of the inlaws. Her mother lives with her at home. Nervous feelings particulary heightedned sunday as she anticipates lecturing on monday.
+
+ROS: Negative except for HPI. 
+
+FHx: 
+
+-Father dies of MI 10 years ago
+
+-Mother: healthy
+
+SocHx: Lives at home with husband, child and mother, works as an english professor, exercises multiple times a week and has normal diet. denies tobacco use, alcohol or drugh use
+[Diagnosis]: Anxiety Disorder
+[Notes]: Pt is a 26 yo female with a 5 year hisotry of palpitations. Over the past two weeks they have become more freuqent to the point where she had to go to the ED, afterwhich she was sent to a folow up with us. She notes that when she has these pisodes she feels that her heart races assocoated with an impending sense of doom. No alleviating or exaceverbating factors. She notes SOB, nausea, throat tightening, and feeling hot to cold and clammy during episodes. Recent labs values wnl (cbc, metabolic, cardiac enzymes, ECG).
+
+ROS- negative except per HPI
+
+PMH-nne
+
+psh-none
+
+hosp-nonoe
+
+meds-none
+
+allgx-none
+
+fhx-none
+
+Home- currently looking for employment, goes on walks, sexually active with boyfriend, uses condoms, no tobacco, alcohol, or drug use.
+[Diagnosis]: Palpitations
+[Notes]: Ms. Whelan is a 26 YOF who presents with c/o palpitations. She has had palpitations in the past 5 years ago but only 3-4 episodes. In the past 3 weeks she has started having increasing frequency and states they happen about 1-2x a day. She has recently had significant life stressors such as losing her job and buying a condo. During her episodes which last around 20-30 minutes, she also has SOB, nausea, feeling of her throat closing and feeling cold and clammy. She denies chest pain, skin changes, cold intolerance, weight changes, bowel changes, or abdominal pain. One episode last week she also had numbness in her fingers and was seen in ED where the cardiac work up was negative.
+
+ROS otherwise negative. PMH/PSH/Meds/allergies/FH: none SH: unemployeed and is sexually active with her boyfriend and uses condoms, denies etoh, tobacco or drug use, exercise regularly
+[Diagnosis]: Anxiety Disorder
+[Notes]: 67 yo f c/o sleeping problem since 3 weeks ago, and she had problems to fell asleep and woke up earlier at morning. She felt sad after her son died and she lost intest in what she like to do before, felt tired, but denied concentration, guilty, and suicide ideas. She has seen her son sitting and listened some party noise which never existed before after took 5 nights of sleeping pills. She denied change of weight, urinary habits, bowel movements, skin or hairs. She had no headache, vision changes, or weakness. No change of weight and increase of appetite. 
+
+ROS: negative except as above
+
+ALL: NKDA
+
+MED: sleeping pills, HCZT, lisinopril
+
+PSH and PMH: HTN for 15 yrs
+
+FH: father had HTN, heart attack, and high cholesterol; mother had depression 
+
+SH: no smoking, drink wine 2-3 times per week, no illicit drug use, retired, husband is supportive
+[Diagnosis]: Insomnia and Depression
+[Notes]: 45-year-old female presenting with nervousness. Started 2 weeks ago. Many days she will wake up nervous and remain nervous the whole day. Coincided with changing roles in her job as a English Literature professor, from a research role to a lecturer role requiring frequent public speaking. Denies having a problem with public speaking prior. Also notes decreased appetite, decreased libido, and difficulty falling asleep. No weight loss as she forces herself to eat regular meals. Denies sweating, palpitations, pallor, fatigue, recent illness. Feels overwhelmed from having to take care of elderly mother, in-laws, and teenage child. Denies sadness. Husband supportive but also busy. Menstrual periods regular. Denies constipation or diarrhea. 
+
+
+
+PMHx: none
+
+Meds: occasional Tylenol for headaches
+
+Allergies: NKDA
+
+Psych Hx: none
+
+Fam Hx: father died of heart attack. no hx of thyroid disease
+
+Soc Hx: social drinking, never smoker, no drug use
+[Diagnosis]: Anxiety Disorder
+[Notes]: 35 yo M who presents with burning, gnawing, non-radiating, mid-epigastric 5/10 pain for the past 2 months. He reports gradual onset of pain and notes these episodes of pain occuring more frequently, 2x a day and lasts for 1-2 hours. He also wakes up in the middle of the night with discomfort. He tried Tums but states it no longer helps. His appetite has been decreased since he feels bloated and notes nausea with the pain as well as more burping. Stool has been darker in color but denies any changes in urine color. Denies any recent fever, chest pain, SOB or cough. 
+
+ROS: Per HPI
+
+PMH: none
+
+PSH: none
+
+Med: Tums, Motrin for back pain (takes 2 tablets twice a day)
+
+Allergies: none
+
+FH: uncle- bleeding ulcer
+
+SH: works in construction, drinks alcohol 1-2 beers per week but stopped drinking past few weeks, smoking 1/2-1PPD for past 20 years, no illicit drug use, not sexually active, diet consists of premade food, no exercise
+[Diagnosis]: Dyspepsia
+[Notes]: Mrs. Townsend is a 45 yo F here with complaints of nervousness
+
+- Started a few weeks ago since the start of her new job as an literature teaher
+
+- Occurs every day nothing makes it better thining about lectures makes it worse
+
+- is not progressively getting worse but does endorse a decrease in her appetite
+
+ROS: no fever chills weight loss night sweats
+
+Meds: Tylenol
+
+Allergies: NKDA
+
+PMHx: None
+
+FH: Dad passed due to MI Mom is healthy
+
+Surgical Hx: None
+
+Social Hx: Works as an english teacher drinks occasionally no smoking no illicit drugs lives home with husband and aging mom who shes states is difficult to take care of.
+[Diagnosis]: Anxiety Disorder
+[Notes]: CC: "chest pain"
+
+Patient is a 17 year old male who complains of chest pain. The pain woke him from sleep yesterday morning. The pain is sharp, worse with inspiration, no radiation, worse with breathing and movement, not relieved by tylenol or albuterol inhaler. Patient denies any SOB or palpitations. Patient reports rhinorrhea and myalgias 3-4 days prior with subjective fevers. Patient denies any recent sick contacts, palpitations, cough, wheezing, headaches, dysuria, nausea or vomiting. 
+
+Pmh: exercise induced asthma
+
+Fhx: father asthma and high cholesterol, paternal grandfather had heart attack
+
+Surgeries: none
+
+NKDA
+
+Med: tylenol, albuterol
+
+Unsure of immunization status
+
+SH: senior in highschool, makes A+Bs, works part time carpenter asst, no pets, no tobacco use, drinks at parties (~1/mo), no recreational drug use
+[Diagnosis]: Chest Pain
+[Notes]: 35 Y F PRESENTED WITH IRREGULAR PERIODS WHICH WAS NOTICED 6 MONTHS AGO, HER LMP WAS 2 MONTHS AGO, SHE HAS 2 KIDS YOUNGEST IS 5 YRS OLD,SHE IS SEXUALLY ACTIVE WITH HER BOYFRIEND AND SHE IS NOT USING ANY PROTECTION, SHE DENIES ANY VAGINAL DISCHARGE, ANY SPOTTING IN BETWEEN THE PERIODS, ANY BREAST FULLNESS, PT ALSO REPORTS BEING TIRED FOR THE LAST 2 YRS, PT REPORTS ALSO WT GAIN OF 10-15 LBS OVER THE LAST 6 MONTHS UNINTENIONALLY.
+
+PT DENIES ANY SKIN CHANGES,ANY FEVER, JOINT PAIN ,SENSITIVITY TO SUN, SOB , CHEST PAIN OR TRAUMA
+
+ROS : NEGATIVE EXCEPT AS ABOVE
+
+ALLERGIES: NONE
+
+MEDS: NONE
+
+PMH: NONE
+
+PSH: NONE
+
+FH: AUNT HAS BREAST CANCER AND GRANDMOTHER HAS CERVICAL CANCER
+
+SOCIAL AND SEXUAL H/O: NO SMOKING, OCCASIONAL ETOH INTAKE, NO RECREATIONAL DRUGS, SEXUALLY ACTIVE WITH BOYFRIEND AND NOT USING ANY PROTECTION, WORKS AS SCHEDUEL ADMINISTRATIVE
+
+OB/GY: LMP 2 MONTHS AGO, MENARCHE AT 12, HAS 2 KIDS, IRREGULAR PERIODS
+[Diagnosis]: Abnormal Uterine Bleeding
+[Notes]: CC: irregular periods
+
+HPI: DM, 44 year old female, present with menstrual irregularities. Symptoms started 3 years ago and have progressed. She denies any abdominal pain, vaginal discharge or vaginal pain. Menses started at 14, have been at regular 28-29 day intervals, without pain and last 2-6 days. Periods now have been unpredictable in onset, length varying 2-6 days and inconsistent bleeding and spotting. She adds that she has experienced hot flashes. She denies changes in weight, SOB, CP, N/V/D, mood changes, dry skin, urinary or bowel habits.
+
+All: none
+
+Meds: HCTZ
+
+PMHx: HTN
+
+PSurg: none
+
+PFamHx: mom has OA, brother has HTN
+
+PSHx: no EtOH, smoking or illicit drug use
+
+Gyn: 2 vaginal births at 30 and 34 years old, last Pap normal, no history of STDs, no abortions, sexually active with husband; LMP 5 weeks ago
+[Diagnosis]: Menopausal Syndrome
+[Notes]: 35 Y F PRESENTED WITH IRREGULAR PERIODS WHICH WAS NOTICED 6 MONTHS AGO, HER LMP WAS 2 MONTHS AGO, SHE HAS 2 KIDS YOUNGEST IS 5 YRS OLD,SHE IS SEXUALLY ACTIVE WITH HER BOYFRIEND AND SHE IS NOT USING ANY PROTECTION, SHE DENIES ANY VAGINAL DISCHARGE, ANY SPOTTING IN BETWEEN THE PERIODS, ANY BREAST FULLNESS, PT ALSO REPORTS BEING TIRED FOR THE LAST 2 YRS, PT REPORTS ALSO WT GAIN OF 10-15 LBS OVER THE LAST 6 MONTHS UNINTENIONALLY.
+
+PT DENIES ANY SKIN CHANGES,ANY FEVER, JOINT PAIN ,SENSITIVITY TO SUN, SOB , CHEST PAIN OR TRAUMA
+
+ROS : NEGATIVE EXCEPT AS ABOVE
+
+ALLERGIES: NONE
+
+MEDS: NONE
+
+PMH: NONE
+
+PSH: NONE
+
+FH: AUNT HAS BREAST CANCER AND GRANDMOTHER HAS CERVICAL CANCER
+
+SOCIAL AND SEXUAL H/O: NO SMOKING, OCCASIONAL ETOH INTAKE, NO RECREATIONAL DRUGS, SEXUALLY ACTIVE WITH BOYFRIEND AND NOT USING ANY PROTECTION, WORKS AS SCHEDUEL ADMINISTRATIVE
+
+OB/GY: LMP 2 MONTHS AGO, MENARCHE AT 12, HAS 2 KIDS, IRREGULAR PERIODS
+[Diagnosis]: Abnormal Uterine Bleeding
+[Notes]: CC: 45 yr old F with nervousness for a few weeks
+
+HPI: Beginning of nervousness occurred when there was an increase in work responsibilities. She reports having difficult falling asleep but denies palpitations, diaphoresis, SOB, heat or cold intolerance, neck masses, weight or appetite changes, change in menstrual history or skin changes. She also denies sadness, anhedonia, difficulty concentrating, suicidal ideations, fatigue and feelings of guilt. She reports numerous stressors at home including having to care for her parents, in-laws and children in addition to more responsibilities at work. 
+
+ROS: Not contributory 
+
+PMH: none
+
+PSH; none 
+
+DH: no meds
+
+SH: No tobacco use, no illicit drug use, drinks ETOH occasionally, lives with husband and denies abuse at home
+
+FH: MI - father at age 65
+[Diagnosis]: Anxiety Disorder
+[Notes]: Mr. Hamilton, 35 yo male c/o intermittent epigastic "burning" associated with nausea x 2 months. Progressivley worse over that period. Initially, he felt tums antacid helped. 
+
+-Pain is nonradiating.
+
+-Stools has been darker than normal.
+
+-a/w burping. 
+
+-Denies vomiting, diarrhea, dizziness, lightheadedness, cough, bowel changes other than darker stools.
+
+-The pain wakes him up at night. 
+
+-now last 1-2 hours, occures twice a day. 
+
+-No recent travel. 
+
+PMH: chronic back pain. For which he takes 400 mg Motrin PRN x 10 years. 
+
+PSH: None. 
+
+SH: In the middle of a divorce. Has good social support. Works construction. Smokes 1/2-1 ppd x 20 years. Not interested in quiting at this time due to life stresses. 
+
+
+[Diagnosis]: Dyspepsia
+[Notes]: Suzanne is a20yo F who presents with abdominal pain location in the RLQ. It started suddenly 8-10 hours ago and is a sharp aching crampy 7/10 constant pain that increases with walking. Ibuprofen has only mildly helped. No relation with food. No n/v, CP, SOB. She also had had loose, watery diarrhea for the past 2-3 days. No blood, no recent travel, no sick contacts, no cough, rhinorrhea.
+
+OBGYN - periods are regular, every 28 days. Last period was 2 weeks ago. Menarche at 13yo. Sexually active 9 months ago with past partner. No STD, no past pregnancies, pratices vaginal sex with men. Hesistant to discuss further.
+
+
+
+Noncontributory PMH, PSH, Meds, allergies, FH
+
+Social - alcohol 1-2/ month. denies drug, smoking
+
+student, excerise with Pillates
+[Diagnosis]: Abdominal Pain
+[Notes]: 20 yo F who presents with 1 day hx of headache. Reports headache began yesterday morning when she woke up, and has become progressively worse since. Describes as dull, constant achy pain that involves her whole head. Never had headaches like this previously. Tried Ibuprofen, Tylenol and sleep but didn't help. Worse with walking and bending over. Bright lights hurt eyes. Vomitted 3 times yesterday. Feeling nauseous. No vision changes, aura, weakness, numbness, tingling, lightheadedness or dizziness. Denies sick contacts 
+
+Pmhx: none
+
+PSH: none
+
+Meds: OCP for 2 years
+
+Allergies: none 
+
+Fhx: migraines in mother, HLD in father
+
+SH: works at sports store; No tobacco use. Drinks 2-3 beers on weekend. Smokes 3-4 joints per week.
+[Diagnosis]: Headache
+[Notes]: Patient is a 17 year old male who reports s 3-4 month history of episodes where he feels his heart is beating out of his chest. They last about 3-4 minutes. They seem to come and go. Most recently he had an episode during a soccer game where he felt pressure in the middle of his chest, became short of breath, and felt like he was going to pass out. He had to move to the sidelines. At the start of college he began taking his roommates adderall prescription to help with studying. Denies other substance use. School was "stressful" but has gotten better since taking the adderall. Denied headache, anxiety, lower extremity swelling, or vision changes.
+[Diagnosis]: Palpitations
+[Notes]: CC: I have RLQ pain.
+
+HPI: Ms. Powelton is a 20 Caucasian female presenting with the chief complaint of RLQ pain over the past 8-10 hours. The pain is constant, dull, crampy, achy in nature, rated as 5/10 with minimum relief with Ibuprofen. The pain does not radiate. Walking intensifies the pain. She does not know the precipitating factor. She has nonbloody diarrhea. She had 3-4 incidents in the past that resolved spontaneously. She denies headache, SOB, palpitations, tingling, numbness, or muscle weakness. 
+
+PMH: She is healthy. No hospitalizations, surgeries, medications, or allergies. 
+
+FH: Parents and siblings are healthy.
+
+SH: Student, not currently sexially active. Social driner.
+
+ROS: Negative except as mentioned above.
+[Diagnosis]: Abdominal Pain
+[Notes]: CC: irregular periods
+
+HPI: DM, 44 year old female, present with menstrual irregularities. Symptoms started 3 years ago and have progressed. She denies any abdominal pain, vaginal discharge or vaginal pain. Menses started at 14, have been at regular 28-29 day intervals, without pain and last 2-6 days. Periods now have been unpredictable in onset, length varying 2-6 days and inconsistent bleeding and spotting. She adds that she has experienced hot flashes. She denies changes in weight, SOB, CP, N/V/D, mood changes, dry skin, urinary or bowel habits.
+
+All: none
+
+Meds: HCTZ
+
+PMHx: HTN
+
+PSurg: none
+
+PFamHx: mom has OA, brother has HTN
+
+PSHx: no EtOH, smoking or illicit drug use
+
+Gyn: 2 vaginal births at 30 and 34 years old, last Pap normal, no history of STDs, no abortions, sexually active with husband; LMP 5 weeks ago
+[Diagnosis]: Abnormal Uterine Bleeding
+[Notes]: HPI: 26 YO F COME FOR FOLLOW UP OF HER HERAT BOUNDING THAT OCCURS 3 WEEKS AGO
+
+SHE HAD HISTOERY OF HEART BOUNDING SINCE 5 YO , AND OCUUR IN EPISODE LAST PERIOD IT IS MORE COMMONLY TO OCCUR
+
+SHE HAD NUMBNESS IN HER FINGERS
+
+SHE DRINK ONE COFFE PER DAY
+
+SHE HAS FEARS OF SOMETHING WRONG WILL HAPPEN
+
+NO WEIGHT CHANGE, NO CHANGE IN APPETITE, NO ABDOMINAL PAIN, OR HOT FLASHES
+
+ OBS/GY: MENARCHE  AT 12, LMP ONE WEEK AND HALF, REGULAR, 5 DAYS EVERY MONTH
+
+ALLERGIES: NKDA
+
+MEDICATION: NONE
+
+ PMH: NONE
+
+ PSH: NONE
+
+ SH: NO SMOKING, NO ALCOHOL, NO ILLICIT DRUGS, SEXUALLY ACTIVE WITH BOY FRIEND ONLY SINCE 1 YO , USE CONDOMS
+
+ FH: NONCONTRIBUTORY
+[Diagnosis]: Palpitations
+[Notes]: 26 f here on f/o regarding visit to the ED for palpitations 2 wks ago. Patient had had no palpitations since but complains of recurrent throat tightness, feelings of being clammy, SOB and nausea. These occur around once/day and have been getting worse over the last 3 wks. Pt had been having a lot of stress in her personal life, she had been having difficulties with her condo for the past 3 months and lost her job 2 months ago. She first had similar symptoms 5 years ago but cannot recall the cause at that time. 
+
+ROS: No H/A, edema, vomiting, fever, CP, cough, BMs are nl, sleep and appetite are nl, no weight change and mood is nl.
+
+PMH: nl. NKA, NKDA. No medications. FH nl. 
+
+Social: No tobacco, EtOH or drug use. 
+
+Sexual: sexually active with boyfriend, no hx of STI.
+[Diagnosis]: Anxiety Disorder
+[Notes]: HPI: 45-year-old female, has come to the outpatient clinic with episodes of nervousness since a few wkees ago.
+
+-Constant, progressive, no previous episodes.
+
+-Nothing makes it better or worse.
+
+-She reports new responsabilities  in her school.
+
+-Associated with anxiety, insomnia, and irritability
+
+-Denies chest pain, stress, dyspnea, fair of  dying,  and paresthesias.
+
+ROS: - exceprt as above. PMH: None. Meds: none. ALL: NKA
+
+Hosp/PSH: None. FH: Noncontributory. 
+
+OB/GYN: G2P2A0. LMP 1 wk ago, Regular. Pap smear NL
+
+SXH: Monoigaous. No STDs. Teacher. No Tob/ETOH/R drugs.
+[Diagnosis]: Anxiety Disorder
+[Notes]: Ms. Wicks is a 67 yo F c/o of trouble sleeping for the past 3 weeks, since her son died. She takes longer to fall asleep, wakes up earlier, sleeps for 4-5 hours and feels drained upon waking up. She has seen her son sitting in the kitchen but is aware it was not really him, she has heard party noises but was told there was none. Denies snoring, memory problems, uses 1 pillow, denies leg swelling, SOB Took ambien the past few nights but it did not help. Denies suicidal/homicidal thoughts. Increased appetite and feels sad. 
+
+pmh- htn, breast cancer, in remission. meds- htz, lisinopril, nkda
+
+surgery- lumpectomy, laparotomy for appendix rupture
+
+family- mother had depression, father- stroke, htn, hypercholesterolemia
+
+social- never smoked, no drug use, alcohol 2-3x per week. she is retired. lives with husband and has a great support system
+[Diagnosis]: Insomnia
+[Notes]: 35 y/o F c/o problems w/ period.
+
+HPI: last normal period 6 months ago; now has menorrhagia - changes tampons every few hours, worse on the first day. Periods lasting 7 days and occurring every other month. 
+
+Menarche at 12 years old.
+
+(-) dyspareunia, abdominal pain/cramping, weakness, hx of trauma to abdomen/pelvis, vision changes, heat/cold intolerance, changes in appetite, palpitations, dysmenorrhea, 
+
+(+) fatiue, weight gain of 10-15 months over 6 months; hx of infertility
+
+PMH: No h/o STD/STI; No abdominal-related illnesses
+
+Meds: No Rx or OTC; ALL: NKDA or other allergies
+
+No hospitalizations/surgeries
+
+FMH: Mom w/ breast CA; Grandma w/ cervical CA
+
+SH: Nonsmoker; 1-2 EtOH/month; No illicit drugs.
+
+Chases kids for exercise; Sexually active w/ boyfriend; no longer uses condoms.
+
+
+[Diagnosis]: Menorrhagia
+[Notes]: 35 yo male presents with stomach pain of 2 months duration. He experiences burning, pnawing upper abdominal pain 2-3 times a day with no relation to food. The pain has been increasing in frequency. Associated nausea and bloating. Pain is a 5/10 with no alleviating or aggrevating factors. He was using tums previously but they began to have no effect and he has stopped taking them. He does take motrin weekly for back pain related to his career as a high elevation construction worker. He is concerned because the pain is waking him from sleep and he is drowsy throughout the day, putting himself and others at risk at work.
+
+PMH: back pain
+
+SH: none
+
+family hx: uncle with bleeding ulcer
+
+NKDA
+
+social: 20 year smoking history, 1/2 pack a day. not currently sexually active. 1 female partner this year with condom use. Works as a high elevation construction worker.
+[Diagnosis]: Abdominal Pain
+[Notes]: 67 yo female presenting with 3 weeks of difficulty falling sleep, waking up early, and tossing and turning. Her son died in an MVA 3 weeks ago. She reports feeling drained and not well rested, describes her mood as "devastated," has reduced interest in her normal activities, increased appetite. She reported one episode of seeing her son at the kitchen table while knowing he wasn't really there, and one episode of hearing what sounded like her neighbor having a party at night only to find that this was not the case.
+
+
+
+She denies nightmares, previous episodes of difficulty sleeping, sudden awakenings or difficulty breathing at night, changes in bowel habits, suicidal ideation, homicidal ideation, changes in concentration, guilt.
+
+
+
+PMH: HTN, 10 years in remission from breast cancer. no past psychiatric history
+
+Meds: HCTZ, lisinopril, took ambien 5 nights with no improvement in sleep
+
+SH: good support system in family
+
+FH: mom depression
+[Diagnosis]: Insomnia
+[Notes]: 26 y/o f pt present for a palpitations followup. Pt appears unkepted and annoyed. Pt states that she has had heart palpitations for 5 yos and it has progressively goteen worse 3 wks ago. She was evaluated before and there were no abnormalities noted. Pt states she has felt nausea, SOB, throat tightness, hot, cold and clammy. Pt denies any triggers, depression, anxiousness, psyc hx, papitation triggers, fever, c/p, rash, pain in joints, urinary or bowel changes, sleep disturbances or weight/appetite change. 
+
+OBGYN: LMP: 2 wks ago. Menses are normal. Paps 6mos ago, normal result. No OCP.
+
+ROS: normal except for the above mentions.
+
+Pt denies: ALL, Meds, hosp, PMH, Trauma and PSHx.
+
+FH: both parents are healthy.
+
+Social hx: pt is currently unemployed and denies usage of alcohol, tobacco and illicit drugs. pt states she walks 3-4 p/w for 30+ min and eats healthy.
+[Diagnosis]: Palpitations
+[Notes]: Pt is a 35 y/o M who presents with intermittent epigastric pain for 2 months which has been worsening in frequency for the past 2 weeks. Pain is non-radiating and occasinally wakes him up from sleep. Reports associated nausea, feeling bloated, and darker brown stools. Took Tums initially with relief, but it no longer helps. No exacerbating factors. Takes weekly Motrin for body aches from working in construction. No similar episodes. Denies fever, chills, CP, SOB, vomiting, hematochezia, diarrhea, constipation, or urinary symptoms.
+
+
+
+ROS: negative except as above
+
+PMHx: none
+
+PSHx: none
+
+FHx: paternal uncle had bleeding ulcers
+
+SHx: works in construction, lives alone, smokes 0.5-1 ppd since age 15 but no interested in quitting, previously drank EtOH but quit since pain started, denies illicit drugs
+
+Allergies: NKA
+
+Meds: Motrin weekly, Tums as needed
+[Diagnosis]: Gastroesophageal Reflux Disease (GERD)
+[Notes]: CC: "nervousness"
+
+HPI: Ms. Karin Moore is a 45 y/o female with no significant PMH who presents with few weeks of constant nervousness. She describes the feeling as unbearable and they are worse on Sundays and Mondays prior to giving lectures as a professor at the university. This is a new change as she used to only do research. Nothing makes it worse or better. Stressors at home include elderly mother with health problems living at home, as well as in-laws living next door. Has decreased appetite. No weight. Pertinent negatives include no dizziness, syncope, headaches, palpitations, SOB, diaphoresis. 
+
+ROS: positive only for nervousness
+
+Meds: Tylenol for headaches
+
+Allergies: NKDA
+
+PMH: none
+
+PSH: none
+
+FH: Father MI, mother lives with patient, needs help
+
+SH: Living with husband, 1 child and mother, has social support
+
+Tobacco:none, EtOH:social, drugs:none, sexually active with husband, 1 lifetime sex partner, husband has vasectomy
+[Diagnosis]: Anxiety Disorder
+[Notes]: MR/ Hamilton is a 35 yo w/ a history of back pain for which he takes motrin weekly coming in with aching and burning pain in the epigastric region for the past 1-2 mo. Denies any changes in severity of pain with food intake although he note he feels more bloated when he eats and has felt that he has had a loss of apetite due to this. Of note pt also has endorsed darker stools over this period that are normal in consistency and about 2x /day. No nausea or vomiting.
+
+Pt started taking tums for the pain which initially but stopped working a few weeks ago. Pt usually has 1-2 beers/week but has stopped drinking since the pain started. 
+
+Of note pt has a smoking history of 1/2 to 1 ppd of cigarettes since age 15.
+[Diagnosis]: Gastroesophageal Reflux Disease (GERD)
+[Notes]: A 17 y/o male hat comes to the clinic with given verbal consent for a history, physical examination, and treatment from his mother due to chest pain that started yesterday morning after he woke up. It us located in his left upper chest, described as sharp/stabbing, non radiating, sitting relaxed to the front relieves it, movement and deep inspiration worsens it, has not worsened since it started and ithe intensity is a 5/10 at rest or an 8/10 at motion or inspiration. He admits having a fever 4 days ago, also a runny nose and muscle aches, but resolved. He exercises 3 times a week at a rock climbing facility. 
+
+ROS: negative except as above
+
+PMH: Exercise induced asthma
+
+Meds: Tylenol, Albuterl inhaler
+
+ALL: NKDA
+
+Occupation: Student and Carpenter assistant
+
+FMH: FatherAsthma and hypercholesterolemia
+
+Social: 1 beer rarely, Marihuana rarely, no smoking
+
+Sexually active with girlfriend, No STD's
+[Diagnosis]: Chest Pain
+[Notes]: 26 year old female with no history presents for follow up after being seen in ED for palpitations 2 weeks ago. Pt notes episodes have been occasionally occuring 5 yeras, lat about 15-30 mins and she becomes short of breath, "clammy", her "throat tightens" and she is neauseated. No known triggers, occurs in social setting as well as readin g abook at home, Expresses some anxiety about future episodes. Sx increased in frequency 3 weeks ago to twice per day. 2 weeks ago was the first time her hands went numb dufing an epidose so she presented to ED. She deneis drug use, alcohol use, family history of medical conditions in cluding same, noallergies, no hospitalizations, and she sees her physician annually.
+[Diagnosis]: Anxiety Disorder
+[Notes]: Ms. Whelan is a 26 y/o F who reports to clinic for a 2 week follow-up after going to the emergency department 3 weeks ago. 5 years ago, she started having episodes of a "racing heart", in which for 15-30 minutes she reports palpitations, SOB, nausea/ vomiting, and a "cold/ clammy" sensation. The episodes have been becoming more frequent as of 3 weeks ago. Currently, she denies HA, edema, N/V (outside of episodes), fever, rash, urinary problems, abdominal pain, dizzziness, weight gain, or any other sx at this time. 
+
+PMH: No hospitalizations/ surgeries/ allergies. No other medical conditions. No medications/ supplements. Negative psychiatric hisotry. 
+
+FH: Negative.
+
+SH: Negative for tobacco, alcohol, or drugs. Sexually active with boyfriend and uses protection. Walks during day and is currently unemployed / looking for job. 
+
+ROS: Negative except above.
+[Diagnosis]: Palpitations
+[Notes]: Ms. Wicks, 67 yr old f, complains of trouble sleeping for last 3 weeks. Says she has trouble falling asleep. Lies in bed for about 1-2 hours before falling asleep. Also wakes up multiple times. Gets about 4-5 hours of sleep every night. No snoring. No dayime sleepiness. Has also experienced loss of energy and concentration in daily activities. Says she doesnt feel like doing anything. No sense of guilt or worthlessness. No suicidal ideation. Appettite has increased but no changes in weight Recently experienced loss of her son 3 weeks ago. Says she still sees him at times but knows it is not real. Said she had a good support system to help her cope with the loss. Does not complain of any changes in her routine other wise. No complaint of sweating/ tremors. 
+
+ROS: Negative except as noted above
+
+PMH: h/o breast cancer in remission fo 10y, HTN
+
+Meds: Lisinopril, HCTZ, Ambien
+
+SH: non-smoker, 1-2 wine glasses at night, no drug use,
+[Diagnosis]: Insomnia
+[Notes]: Pt is a 35 y/o m who presents with epigastric pain x 2 months. Previously tums used to help but has not in the past 2 weeks. He states it occurs to his epigastric region, nonradiating, "burning," 5/10, intermittent. Associated with intermittent melena in his stool, nausea, fatigue x 2 weeks. States his appetite is same but is eating less due to feeling bloated. Denies vomiting, diarrhea, recent weight loss, recent fevers, constipation, reflux, heartburn, tenesmus, abdominal pain, SOB, CP. Has 20 year tobacco .5-1 ppd smoking Hx. Dit consists of fast food. Previously exercised 3-4x/week but hasn't lately due to pain. Takes motrin 200mg once/week last 10yrs
+
+PMH none
+
+FMHx - uncle on dad's side had bleeding ulcer
+
+Social Hx: 20 year tobacco smoking hx .5-1ppd (doesn't want to quit), drinks few beers/weekend, denies recreational drugs. Works on high elevation construction
+
+Meds - motrin once a week for body aches 200 mg for past 10 years.
+[Diagnosis]: Gastroesophageal Reflux Disease (GERD)
+[Notes]: Edie Whelan is a 26 y/o female with a 5 year history of intermittent, increasingly frequent, 15-30 minute episodes of palpitations, fear that her heart might stop beating, tighness in her throat, nausea, and shortness of breath.  The most recent episode 2 weeks ago was accompanied by numbeness in her fingers and prompted her to visit the ED, where CBC, electrolytes/glucose, cardiac enzymes, and ECg were all within normal limits.  She denied no trigger for these episodes.
+
+
+
+She has no medical conditions, takes no medications, and has no known drug allergies.
+
+Lives alone, eunemployed for 2 months, prior work in sales.
+
+Sexually active with boyfriend (relationship well).
+
+No EtOH, tobacco, or recreational drug use.
+
+LMP 2 weeks ago, nulliparous, no history of STIs
+[Diagnosis]: Anxiety Disorder
+[Notes]: 35 year old patient presenting for heavy period. She reports having irregular periods in the past 6 months, they were heavy, lasting 7 days. She used 7 tampons on the first day. Normally she has a regular period lasting for 3- days with 4 pads a day. She describes normal cramping abdominal pain, no urinary or GI symptoms. No blood between periods. To note she was on hormonal therapy at age 12 for irregular period. Meds stoppend 11 years ago. Patient also describes skin changes over her neck and dorsum of her hands. She reports weight gain in the past 6 month (10-15 pounds) with all day fatigue. Good appetite, normal sleep, no depressed mood. No cold intolerance, No hair change.
+
+ROS otherwise normal
+
+Meds: none, PMH:PCOS, PSH:none, FM grandmother: cervical caner, Aunt: breast cancer. SH: 2 daughters by adoption, non smoker, occasional beers (1-2), sexually active with boyfriend, not using condoms since 1 year. Occupation: administrator
+[Diagnosis]: Polycystic Ovary Syndrome (PCOS)
+[Notes]: 45 y o F comes with complaints of nervousness she noticed a few weeks ago. She is an English professor and has recenty increased her duration of work hours and is taking more lectures than normal. She has difficulty falling asleep, but gets 7-8 hours of sleep every night. Nervousness Worsens on Sunday night and Monday mornings. No h/o palpation or anxiety. No hx of weight changes, cold or heat intolerance. No history of change in mood, depression. No changes in skin or hair.  
+
+Walks 1 mile, 3 times a week. Diet is healthy, sometimes she doesn't feel like eating. 
+
+ROS: WNL 
+
+Allergies: NKDA
+
+Medications: tylenol
+
+PH: none
+
+PSH: 2 C- sections 10 yrs ago, no complications during pregancy 
+
+FH: father died of MI, mother is health
+
+Menstrual history:  regular 3 day cycle
+
+LMP: 1 week ago 
+
+SH: sexually active with husband, does not smoke, drink or use recreational drugs.
+[Diagnosis]: Anxiety Disorder
+[Notes]: Pt is a 26yoF coming in for follow up for palpitations. She describes the episodes as heart racing, feeling of doom and like she is going to die, SOB, throat closes, gets hot and cold, feels clammy. These episodes have been happening for the past 5 years, but increased in frequency 3 weeks ago. Has had increased stressors in the past 3 months of buying new condo and losing job. She says she is able to cope with these stressors by talking to other people, but is interested in talking to a therapist for more coping techniques. Mood is good and has remained unchanged. Endorses Nausea, no vomiting, and 1 episode where fingertips became numb, without any color changes. Denies F/C, CP, sweats, abdominal pain, change in urination/bowel habits. 
+
+Family history: all are healthy
+[Diagnosis]: Anxiety Disorder
+[Notes]: Chad Hamilton is a 35 year old male who presents with stomach problems for the past two months. He experiences 5/10 burning pain in the epigastrum. It is nonradiating. It lasts for about 1-2 hours and also occurs at night. He took 2-3 Tums with each episode but it stopped helping about a week ago. He endorses darkening of his stool but that it is not tarry or black. He endorses bloating which has caused him to eat less. His diet usually includes street truck food. He drinks 4-5 cups of coffee. He endorses nausea but no vomiting. He denies dysphagia. He denies weight loss. He states that it is not associated with meals. 
+
+PMH: None
+
+PSH: None
+
+Meds: Motrin PRN, Tums PRN
+
+Allergies: None
+
+Family history: Paternal Uncle with PUD, no family history of cancer
+
+Social: works as construction worker for past 10 years; 1-2 beers but quit drinking a week ago; Smokes 1/2-1 pack of cigarettes/day for 15 years; no drug use
+[Diagnosis]: Gastroesophageal Reflux Disease (GERD)
+[Notes]: 26F follow up for palpitations. Seen in ED 2 weeks ago for "chest pounding" with numbness in fingers. ED workup negative. Patient reports having similar episodes for 5 years. At first, 2-3x/month, then starting 3 weeks ago, has happened 2-3 x/day. Has been slowing down this last week. Episodes consist of heart pounding, nausea, throat tightening, shortness of breath, and cold/clammy sensation. Random onset, no precipitating factors, no alleviating or exacerbating factors. No CP, no heat intolerence, no weight loss/weight gain, no vomiting. This was 1st ED visit for these epsidoes; this was first time she had finger numbness (bilaterall, hands only). No headache or weakness.
+
+
+
+PMH: none
+
+Surg: None
+
+Allergies: None
+
+Meds: none
+
+Social: recently unemployed, states to be coping well with friends/family. Lives alone. No alc, drugs or smoking. Sexually active with BF, always uses condom, LMP 4 weeks ago.
+[Diagnosis]: Anxiety Disorder
+[Notes]: Patient is a 35 year old female with a chief complaint about her periods. No pain is associated with her cc. Periods are described as heavy in flow, requiring changes of pads every 2 hours. There are no alleviating measures taken and no aggravating factors noted. Patient notes that she has been tired lately, but attributes it to taking care of her two adopted children. This is the first time she's had this problem with her menstrual cycle.
+
+
+
+No history of surgery, illnesses, trauma; no changes in sleep pattern, no changes in appetite. 
+
+No allergies,No medications
+
+Fhx: Grandmother has cervical cancer, aunt has breast cancer
+
+OB: Normal cycle until 6 months ago; now heavy flow, changing pads every 2 hours, lasting 7 days. G0P0, patient had tried getting pregnant for 9 years with no success so they opted for adoption of their 2 children.
+
+Sx: 1 male partner, no contraception used, - pain sex
+
+SO: Schedule coordinator, lives with 2kids
+[Diagnosis]: Dysfunctional Uterine Bleeding
+[Notes]: HPI
+
+-35M with 2 month history of epigastric pain
+
+-gradual onset, progressively worsening, intermittent, epigastric pain, 5/10, wakes him up at night sometimes 
+
+-associated with nausea, early satiety, sensation of bloating, and more burping
+
+-decreased po take in the last 2 months, no weight loss, no fever/chills, no night sweats, no diarrhea, no changes in bowel habits
+
+-has noticed stool looking darker brown but no melena, no hematochezia
+
+-no recent travel; currently going through a divorce and is under quite a bit of stress
+
+
+
+PMHX - back pain/muscle spasm
+
+PSHx - no previous surgeries
+
+Medications - motrin
+
+Allergies - NKDA
+
+FHx - uncle with bleeding ulcer disease
+
+Social - 20 pack year smoker; no EtOH in the last 2 months; no recreational drugs; works in construction
+
+
+[Diagnosis]: Gastroesophageal Reflux Disease (GERD)
+[Notes]: CC: 26 yrs/f presented with palpitations. HPI: palpitations 4-5 times in past 5 yrs. Saw ER last week and the ncame in today for follow up. episodes, 1-2 / day,lasting 15 -30 mins, not precipitated by any event, not made better or worse by anything. c/o- associated SOB, calmy cold extreemties and tingling in arms but no dizziness, Loss of Consciousness, fever, Abdominal pain, urianary or bowel changes. No fatigue, sleep or appetite changes. ROS: None except above. No tremors. PMH: Similar symptoms since last 5 yrs 4-5 time in last 5 yrs. PSH: Nl, meds: nl, aLLERGIES: NKDA, FHx: none in family members. Social hx: no tobacco, etoh or rec drug use, mood low and anxious since she lost job a couple of months back, lives alone, doesnot feel lonely, no suicidal ideations, feels safe. OBG: lmp 2 dyas back, 4d/28-30 days, no previous pregnancies, last pap smear 6 months back, normal. SxHX: Active with bf in last 1 yr, uses condoms, no sti
+[Diagnosis]: Anxiety Disorder
+[Notes]: CC: palpitations
+
+26 yo female with 5 year history of palpitations
+
+-event first happened 5 years ago, has become progressively worse in the past 3 weeks. 
+
+-recent added stress of loosing job and having to pay for new condo
+
+-events come out of nowhere, no known triggers
+
+-events include: palpitations, feeling like something really bad will happen, sweaty hands, clammy, throat tightens, hands have gone numb, nausea
+
+-work up recently in the ED was normal including normal CBC, CMP, troponins, and EKG
+
+-denies CP, change in urination, Nausea or vomiting outside of events, denies sleep problems, denies feeling anxious or depressed
+
+PMHx: none
+
+Meds: none
+
+allergies: none
+
+Surgical HX: none
+
+Family Hx: none
+
+Social hx: lives at home alone, job hunting, stays active and socializes.
+
+ROS neg except above
+[Diagnosis]: Anxiety Disorder
+[Notes]: Ms Whelan is a 26 yo F with no significant PMHx, coming today in today for follow for ED visit for palpitations. about 5 years prior Ms Whelan had her first episode of heart palpitations however they were infrequent until 3 weeks ago when they started occuring 1-2x/day, and cooccured with finger numbness. She then visited the ED where EKG, CMP, cardiac enzymes, and EKg were normal. since then she has had palpitations about 1x/day, but no finger numbness. During these episodes she gets SOB and her throat "closes up", she also feels hot and clammy, and nauseous. Of note she did recently bought a condo 3months ago and then got laid off. She exercises regularly.
+
+PMHx: followed by and OBGYN and has no current problems. regular menstural cycle. no past surgeries or allergies
+
+FMHx: none
+
+SocHx: used to work in sales. no tobacco or etoh or drug use. No caffiene use. sexually active with 1 male, vaginal sex, uses condoms
+[Diagnosis]: Anxiety Disorder
+[Notes]: 35M with pain in the epigastric region of the stomach, worsening over 2 months.  Described as intermittent, associated with nausea, no vomiting, darker stool x 2 weeks.  Nothing makes it worse, no food specificity, antacids initially helped but no longer.  Pain does not radiate, severe enough now to wake him from sleep.  No travel history.
+
+
+
+ROS:  Denies fever, night sweats, fatigue, weight loss, cough, vomiting, diarrhea, constipation, any other changes to bowel or bladder.
+
+
+
+PMH:  Back pain - from job, takes motrin which always works
+
+PSH: none
+
+FH - uncle with peptic ulcer, otherwise all family members well, no family history of cancer.
+
+SH:  Smoker x 20 years, 1/2 to 1 full pack per day,  drinks alcohol regularly but stopped 3 weeks ago, "just decided to stop".  Works as a construction worker.  Undergoing divorce with wife x 6 months which is almost finalized.  Not currently sexually active, was previously monogamous with wife.
+
+
+[Diagnosis]: Gastroesophageal Reflux Disease (GERD)
+[Notes]: cc:palpitaions
+
+26 female c/o palpitaions that started 5 years ago and would happen every few months but recently in the last 3 weeks has been have episodes 1/2 times a day. Pt  feels clammy and throat tightens and SOB during episodes and last episode her fingers felt numb. Pt states after episodes feels tires rest of the day and cannot concentrate.  Pt denies chest pain, urinary changes, bowel changes, weight loss. Pt did mention that she bought a condo 3 months ago and lost her job 2 months ago. Nothing makes them better or worse and happen randomly. 
+
+ROS: denies heaches, dizzyness, nausea. 
+
+PMHx: none
+
+MEds: none
+
+Social: does not drink or smoke or do drugs. 
+
+SexHx: sexually active with boyfriend and use condoms last STI was all negative.
+[Diagnosis]: Anxiety Disorder
