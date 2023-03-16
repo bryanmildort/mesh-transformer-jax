@@ -2,27 +2,26 @@ import nlpcloud
 import pandas as pd
 import time
 
-notes = pd.read_csv('notes.csv')
-notes = notes.sample(frac = 1)
+notes = pd.read_csv('notes.csv').sample(frac = 0.1)
 
 def nlp_scrape(index):
     global start_index, prompt
     for i in range(index, len(notes)):
         start_index = i
-        with open("prompts.txt", 'r') as f:
+        with open("prompts2.txt", 'r') as f:
             prompt = f.read()
-        last_ten = f"[Notes]: {'[Notes]: '.join(prompt.split('[Notes]: ')[-9:])}"
-        prompt_input = f"{last_ten}\n[Notes]: {notes.iloc[i,0]}\n[Diagnosis]:"
-        client = nlpcloud.Client("finetuned-gpt-neox-20b", "1b3fdd3f6f0bbdb70675d4402ca55767d41588ed", gpu=True, lang="en")
+        last_five = f"[Notes]: {'[Notes]: '.join(prompt.split('[Notes]: ')[-4:])}"
+        prompt_input = f"{last_five}\n[Notes]: {notes.iloc[i,0]}\n[Summary]:"
+        client = nlpcloud.Client("finetuned-gpt-neox-20b", "b1cedee8a0427eb9a16a035faf8586ef46a1d440", gpu=True, lang="en")
         response = client.generation(
             prompt_input,
-            min_length=2,
-            max_length=15,
+            min_length=10,
+            max_length=50,
             length_no_input=True,
             remove_input=True,
             end_sequence=None,
             top_p=1,
-            temperature=0.5,
+            temperature=0.4,
             top_k=50,
             repetition_penalty=1,
             length_penalty=1,
@@ -34,13 +33,13 @@ def nlp_scrape(index):
             bad_words=None,
             remove_end_sequence=False
         )
-        output = f"\n[Notes]: {notes.iloc[i,0]}\n[Diagnosis]: {response['generated_text']}"
-        with open('prompts.txt', 'a') as f:
+        output = f"\n[Notes]: {notes.iloc[i,0]}\n[Summary]: {response['generated_text']}"
+        with open('prompts2.txt', 'a') as f:
             f.write(f"{output}")
         time.sleep(30)
 
 
-start_index = 33999
+start_index = 18
 start = 1
 while start == 1:
     try:
@@ -54,30 +53,30 @@ while start == 1:
 # 98026b5681e4bd90a723af8dae86261465021fda
 # b1cedee8a0427eb9a16a035faf8586ef46a1d440
 
-# Convert dataset to zstd compressed json
+# Convert dataset to json
 import json
 
-with open("prompts.txt", 'r') as f:
+with open("prompts2.txt", 'r') as f:
     prompt = f.read()
 
 prompt_list = prompt.split('[Notes]: ')
 prompt_list.pop(0)
 output = {}
 for i in range(len(prompt_list)):
-    row = prompt_list[i].split('[Diagnosis]: ') 
+    row = prompt_list[i].split('[Summary]: ') 
     output['prompt'] = row[0]
     output['completion'] = row[1]
-    if (len(output['prompt']) + len(output['completion'])) < 2048:
-        with open('dataset.jsonl', 'a') as f:
-            f.write('\n')
-            json.dump(output, f)
+    with open('dataset.jsonl', 'a') as f:
+        json.dump(output, f)
+        f.write('\n')
 
-
-
-
-from transformers import GPTNeoXForCausalLM, GPTNeoXTokenizerFast, AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer, AutoModelForCausalLM, DataCollatorForLanguageModeling
+from transformers import GPTNeoXForCausalLM, GPTNeoXTokenizerFast, AutoTokenizer, TrainingArguments, Trainer, DataCollatorForLanguageModeling, GPTJForCausalLM, AutoModelForCausalLM
 from datasets import load_dataset
-dataset = load_dataset("text", data_files="mimic_notes.txt")
+import torch
+dataset = load_dataset("json", data_files="dataset.jsonl")
+
+## Convert jsonl to json in terminal ##
+# cat dataset.jsonl | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/,/g'  | sed 's/n/,/' | sed 's/^/[/'| sed 's/$/]/' > dataset1.json
 
 # with open('dataset.jsonl', 'r') as f:
 #     json_list = list(f)
@@ -86,12 +85,25 @@ dataset = load_dataset("text", data_files="mimic_notes.txt")
 
 ### GPT-J6B ###
 tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
-model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
+model = GPTJForCausalLM.from_pretrained("bryanmildort/gpt-clinical-notes-summarizer", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, load_in_8bit=True
+)
 
+### GPT-2XL ###
+# tokenizer = GPT2Tokenizer.from_pretrained('gpt2-xl')
+# model = GPT2LMHeadModel.from_pretrained('gpt2-xl')
 
 ### GPT-Neo20B ###
 # model = GPTNeoXForCausalLM.from_pretrained("EleutherAI/gpt-neox-20b")
 # tokenizer = GPTNeoXTokenizerFast.from_pretrained("EleutherAI/gpt-neox-20b")
+
+### GPT-JT ###
+tokenizer = AutoTokenizer.from_pretrained("togethercomputer/GPT-JT-6B-v1")
+model = AutoModelForCausalLM.from_pretrained("togethercomputer/GPT-JT-6B-v1")
+max_positions = 2048
+for i in range(len(model.transformer.h)):
+    model.transformer.h[i].attn.bias[:] = torch.tril(torch.ones((max_positions, max_positions), dtype=torch.uint8)).view(
+        1, 1, max_positions, max_positions
+    )
 
 ### GPT-Neo2.7B ###
 # model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-neo-2.7B")
@@ -114,17 +126,46 @@ model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
 #   cache_dir="./pythia-2.8b-deduped/step143000",
 # )
 
+### BioBERT ###
+# tokenizer = AutoTokenizer.from_pretrained("bvanaken/CORe-clinical-outcome-biobert-v1")
+# model = BertForMaskLM.from_pretrained("bvanaken/CORe-clinical-outcome-biobert-v1", is_decoder=True)
+
+
+column_names = dataset["train"].column_names
+preprocessing_num_workers = None
+
 def tokenize_function(examples):
-    return tokenizer(examples["text"], return_tensors='pt', padding=True, truncation=True, max_length=2048)
+    return tokenizer(examples["prompt"], examples["completion"], padding=True, truncation=True, max_length=2048)
+
 
 if tokenizer.pad_token is None:
     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
 
+tokenized_dataset = dataset.map(tokenize_function, batched=True, num_proc=preprocessing_num_workers, remove_columns=column_names, keep_in_memory=True)
+
 model.resize_token_embeddings(len(tokenizer)) ##### THIS IS HOW YOU RESIZE THE MODEL TO MATCH THE TOKENIZER!!!!
 
-tokenized_dataset = dataset.map(tokenize_function, batched=True)
+# def copy_texts(examples):
+#     examples["labels"] = examples["input_ids"].copy()
+#     return examples
 
-training_args = TrainingArguments(output_dir="test_trainer")
+# tokenized_datasets = tokenized_dataset.map(
+#     copy_texts, 
+#     batched=True, 
+#     num_proc=preprocessing_num_workers
+# )
+
+import torch
+import random
+import numpy as np
+seed_val = 23
+random.seed(seed_val)
+np.random.seed(seed_val)
+torch.manual_seed(seed_val)
+torch.cuda.manual_seed_all(seed_val)
+
+
+training_args = TrainingArguments(output_dir="test_trainer", save_total_limit = 2, save_strategy="no", load_best_model_at_end=False)
 data_collator = DataCollatorForLanguageModeling(tokenizer, mlm=False)
 
 
@@ -132,17 +173,21 @@ trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=tokenized_dataset['train'],
-    data_collator=data_collator
+    data_collator=data_collator,
     #eval_dataset=encoded_eval,
     #compute_metrics=compute_metrics,
 )
 
-### TO FREE UP SPACE USING LARGE LM ###
-import os, shutil
+# huggingface-cli lfs-enable-largefiles ./path/to/your/repo
+
+### TO FREE UP MEMORY AND DISK SPACE FROM USING LARGE LM (6B+) ###
+import shutil
 shutil.rmtree("/home/bryan/.cache") 
 del dataset
-trainer.train()
 
+trainer.train()
+trainer.save_model(output_dir='./gpt_jt')
+tokenizer.save_vocabulary('./gpt_jt')
 
 
 ############
@@ -158,7 +203,7 @@ trainer.train()
 
 # gsutil -m cp -R D:/step/step_383500 gs://gpt-j6b 
 
-from transformers import GPTNeoXForCausalLM, AutoTokenizer, AutoModel
+from transformers import GPTNeoXForCausalLM, AutoTokenizer, AutoModel, BertLMHeadModel
 
 # model = AutoModel.from_pretrained("healx/gpt-2-pubmed-medium")
 # tokenizer = AutoTokenizer.from_pretrained("healx/gpt-2-pubmed-medium")
@@ -230,16 +275,14 @@ input_ids = tokenizer(prompt, return_tensors="pt").input_ids
 
 gen_tokens = model.generate(
     input_ids,
-    #do_sample=True,
-    temperature=0.5,
-    min_length=711,
-    max_length=720,
+    do_sample=True,
+    temperature=0.8,
+    max_length=888
 )
 
 gen_text = tokenizer.batch_decode(gen_tokens)[0]
+gen_text
 
-trainer.save_model('./my_model')
-tokenizer.save_vocabulary('./my_model')
 
 # import os, torch
 # torch.save(model.state_dict(), 'notes_gpt.bin')
@@ -256,12 +299,291 @@ tokenizer.save_vocabulary('./my_model')
 
 # GPT2 Text gen
 from transformers import pipeline, set_seed
-generator = pipeline('text-generation', model='./test_trainer/checkpoint-500')
+generator = pipeline('text-generation', model='./my_model1')
 set_seed(42)
-generator(prompt, max_length=50, num_return_sequences=1)
+generator(prompt, min_length=2, max_length=12, temperature=0.5, num_return_sequences=1)
 
 notes_list = list(notes.TEXT)
 for i in notes_list:
     with open('mimic_notes.txt', 'a') as f:
-        f.write('\n\n##########\n\n')
         f.write(i)   
+        f.write('\n\n##########\n\n')
+
+# du -a | sort -n -r | head -n 50
+rm 
+# rm -rf ./anaconda3/envs/amazonei_pytorch_latest_p37
+# rm -rf ./anaconda3/envs/amazonei_pytorch_latest_p37/tensorflow2_p310
+# rm -rf ./anaconda3/envs/tensorflow2_p310
+# rm -rf ./anaconda3/envs/mxnet_p38
+# rm -rf ./anaconda3/envs/amazonei_mxnet_p36
+# rm -rf ./anaconda3/envs/amazonei_tensorflow2_p36
+# rm -rf ./anaconda3/envs/R
+
+for epoch in range(num_epochs):
+    for batch in train_dataloader:
+        batch = {k: v.to(device) for k, v in batch.items()}
+        outputs = model(**batch)
+        loss = outputs.loss
+        loss.backward()
+        optimizer.step()
+        lr_scheduler.step()
+        optimizer.zero_grad()
+        progress_bar.update(1)
+
+
+#############
+import torch
+from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, MegatronBertForCausalLM
+from transformers import BertModel
+if torch.cuda.is_available():   
+    device = torch.device("cuda")
+    print('There are %d GPU(s) available.' % torch.cuda.device_count())
+    print('We will use the GPU:', torch.cuda.get_device_name(0))
+else:
+    print('No GPU available, using the CPU instead.')
+    device = torch.device("cpu")
+
+tokenizer = AutoTokenizer.from_pretrained('./MegatronBERT')
+model = MegatronBertModel.from_pretrained('./MegatronBERT')
+
+# for i in range(len(notes)):
+#     prompt = notes.iloc[i]['prompt']
+#     completion = notes.iloc[i]['completion']
+#     sentence = f"[Notes]: {prompt}[Summary]: {completion}"
+#     encoded_dict = tokenizer.encode_plus(
+#                         sentence,                      
+#                         #add_special_tokens = True, 
+#                         max_length = 512,           
+#                         padding = True,
+#                         truncation = True,
+#                         return_attention_mask = True,   
+#                         return_tensors = 'pt',    
+#                    )    
+#     input_ids.append(encoded_dict['input_ids'])
+#     attention_masks.append(encoded_dict['attention_mask'])
+
+dataset = load_dataset("json", data_files="dataset1.json")
+
+def tokenize_function(examples):
+    return tokenizer(examples["prompt"], examples["completion"], return_tensors='pt', padding=True, truncation=True, max_length=512)
+
+if tokenizer.pad_token is None:
+    tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+
+model.resize_token_embeddings(len(tokenizer))
+
+tokenized_dataset = dataset.map(tokenize_function, batched=True, keep_in_memory=True)
+
+input_ids = []
+attention_masks = []
+input_tokens = tokenized_dataset['train']['input_ids']
+att_tokens = tokenized_dataset['train']['attention_mask']
+for i in range(len(tokenized_dataset['train']['input_ids'])):
+    input_ids.append(torch.tensor(input_tokens[i]).unsqueeze(dim=0))
+    attention_masks.append(torch.tensor(att_tokens[i]).unsqueeze(dim=0))
+
+input_ids = torch.cat(input_ids, dim=0)
+attention_masks = torch.cat(attention_masks, dim=0)
+
+from torch.utils.data import TensorDataset, random_split
+from torch.optim import AdamW
+dataset = TensorDataset(input_ids, attention_masks)
+train_size = int(0.9 * len(dataset))
+val_size = len(dataset) - train_size
+train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+
+from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
+batch_size = 32
+train_dataloader = DataLoader(
+            train_dataset,  # The training samples.
+            sampler = RandomSampler(train_dataset), # Select batches randomly
+            batch_size = batch_size # Trains with this batch size.
+        )
+validation_dataloader = DataLoader(
+            val_dataset, # The validation samples.
+            sampler = SequentialSampler(val_dataset), # Pull out batches sequentially.
+            batch_size = batch_size # Evaluate with this batch size.
+        )
+
+# Model Parameter Observations ##
+params = list(model.named_parameters())
+print('The BERT model has {:} different named parameters.\n'.format(len(params)))
+print('==== Embedding Layer ====\n')
+for p in params[0:5]:
+    print("{:<55} {:>12}".format(p[0], str(tuple(p[1].size()))))
+
+
+print('\n==== First Transformer ====\n')
+for p in params[5:21]:
+    print("{:<55} {:>12}".format(p[0], str(tuple(p[1].size()))))
+
+
+print('\n==== Output Layer ====\n')
+for p in params[-4:]:
+    print("{:<55} {:>12}".format(p[0], str(tuple(p[1].size()))))
+
+optimizer = AdamW(model.parameters(),
+                  lr = 5e-5, # args.learning_rate - default is 5e-5
+                  eps = 1e-8 # args.adam_epsilon  - default is 1e-8.
+                )
+
+from transformers import get_linear_schedule_with_warmup
+epochs = 3
+total_steps = len(train_dataloader) * epochs
+scheduler = get_linear_schedule_with_warmup(optimizer, 
+                                            num_warmup_steps = 0, # Default value in run_glue.py
+                                            num_training_steps = total_steps)
+
+# This training code is based on the `run_glue.py` script here:
+# https://github.com/huggingface/transformers/blob/5bfcd0485ece086ebcbed2d008813037968a9e58/examples/run_glue.py#L128
+
+import random, time, datetime
+import numpy as np
+seed_val = 26
+random.seed(seed_val)
+np.random.seed(seed_val)
+torch.manual_seed(seed_val)
+training_stats = []
+total_t0 = time.time()
+
+def format_time(elapsed):
+    elapsed_rounded = int(round((elapsed)))    
+    return str(datetime.timedelta(seconds=elapsed_rounded))
+
+# For each epoch...
+for epoch_i in range(0, epochs):
+    # Perform one full pass over the training set.
+    print("")
+    print('======== Epoch {:} / {:} ========'.format(epoch_i + 1, epochs))
+    print('Training...')
+    # Measure how long the training epoch takes.
+    t0 = time.time()
+    # Reset the total loss for this epoch.
+    total_train_loss = 0
+    model.train()
+    # For each batch of training data...
+    for step, batch in enumerate(train_dataloader):
+        # Progress update every 40 batches.
+        if step % 40 == 0 and not step == 0:
+            # Calculate elapsed time in minutes.
+            elapsed = format_time(time.time() - t0)            
+            # Report progress.
+            print('  Batch {:>5,}  of  {:>5,}.    Elapsed: {:}.'.format(step, len(train_dataloader), elapsed))
+        # Unpack this training batch from our dataloader.
+        b_input_ids = batch[0].to(device)
+        b_input_mask = batch[1].to(device)
+        model.zero_grad()        
+        # Perform a forward pass (evaluate the model on this training batch).
+        # loss, logits = model(b_input_ids, 
+        #                      token_type_ids=None, 
+        #                      attention_mask=b_input_mask)
+        # # Accumulate the training loss over all of the batches
+        # total_train_loss += loss.item()
+        # Perform a backward pass to calculate the gradients.
+        # loss.backward()
+        # Clip the norm of the gradients to 1.0.
+        # This is to help prevent the "exploding gradients" problem.
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        # Update parameters and take a step using the computed gradient.
+        optimizer.step()
+        # Update the learning rate.
+        scheduler.step()
+    # Calculate the average loss over all of the batches.
+    # avg_train_loss = total_train_loss / len(train_dataloader)
+    # Measure how long this epoch took.
+    training_time = format_time(time.time() - t0)
+    print("")
+    # print("  Average training loss: {0:.2f}".format(avg_train_loss))
+    print("  Training epoch took: {:}".format(training_time))        
+# Record all statistics from this epoch.
+    training_stats.append(
+        {
+            'epoch': epoch_i + 1,
+            # 'Training Loss': avg_train_loss,
+            'Training Time': training_time,
+        }
+    )
+
+print("")
+print("Training complete!")
+print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
+
+
+model_to_save = model.module if hasattr(model, 'module') else model
+model_to_save.save_pretrained('./bert_model')
+tokenizer.save_pretrained('./bert_model')
+
+output_dir = './gpt-j-6B'
+from transformers import pipeline, set_seed
+generator = pipeline('text-generation', model=output_dir)
+set_seed(23)
+generator(prompt, max_length=264, temperature=0.5, num_return_sequences=1)
+
+from transformers import GPT2Tokenizer, GPT2Model
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium')
+model = GPT2Model.from_pretrained('gpt2-medium')
+text = "Replace me by any text you'd like."
+encoded_input = tokenizer(text, return_tensors='pt')
+output = model(**encoded_input)
+
+max_length = len(output['logits'][0]) + 50
+
+###### Handling Bigger Models for Inference ######
+from accelerate import init_empty_weights
+from transformers import AutoConfig, AutoModelForCausalLM
+
+
+config = AutoConfig.from_pretrained(checkpoint)
+
+# with init_empty_weights():
+#     model = AutoModelForCausalLM.from_config(config)
+
+# from accelerate import load_checkpoint_and_dispatch
+
+# model = load_checkpoint_and_dispatch(
+#     model, checkpoint, device_map="auto", no_split_module_classes=["GPTJBlock"]
+# )
+
+checkpoint = "bryanmildort/gpt-notes-summarizer-demo"
+model = AutoModelForCausalLM.from_pretrained(checkpoint, device_map="auto", offload_folder="offload", offload_state_dict = True, no_split_module_classes=["GPTJBlock"], torch_dtype=torch.float16)
+
+from accelerate import infer_auto_device_map, init_empty_weights
+device_map = infer_auto_device_map(model, dtype="float16")
+
+notes_input = tokenizer("Hi my name is ", return_tensors='pt')
+output = model(**notes_input)
+max_length = len(output['logits'][0]) + 50
+input_ids = notes_input.input_ids
+gen_tokens = model.generate(input_ids, do_sample=True, temperature = 0.5, max_length=max_length)
+gen_text = tokenizer.batch_decode(gen_tokens)[0]
+return gen_text.replace(notes, '')
+
+# /dev/nvme1n1             /home/ec2-user/store                  ext4    defaults        0 0
+
+def summarize_function(notes):
+    max_length = len(notes.split(' ')) + 50
+    return tokenizer.batch_decode(
+        (
+            model.generate(
+                tokenizer(notes, return_tensors="pt").input_ids,
+                do_sample=True,
+                temperature=0.5,
+                max_length=250,
+            )
+        )
+    )
+    
+def summarize_function(notes):
+    notes_input = tokenizer(notes, return_tensors='pt')
+    # output = model(**notes_input)
+    # max_length = len(output['logits'][0]) + 50
+    max_length = len(notes.split(' ')) + 50
+    input_ids = notes_input.input_ids
+    gen_tokens = model.generate(input_ids, do_sample=True, temperature = 0.5, max_length=max_length)
+    gen_text = tokenizer.batch_decode(gen_tokens)[0]
+    return gen_text.replace(notes, '')
+
+
+# The task is to generate a short summary of the given clinical notes. Do not repeat the notes verbatim.
+# 20 y/o female c/o abdominal pain. Onset was 8-10 hours ago in the right lower quadrant without radiation. Started as 4/10 and is now 5/10, constant,dull, achy, and cramping in nature. Tried Ibuprofen for the pain which helped a little. Walking makes the pain worse. Associated with 4-5 episodes of non-bloody, non-mucoid diarrhea every day for the past 2-3 days. Has had similar episodes in the past that occur randomly, this episode is the worst. No precipitating factors. Denies past medical conditions, allergies, meds, surgeries, travel history, trauma. No family history of diseases. OB/GYN: menarche at 13, regular periods each month, LMP 2 weeks ago, uses 4 pads/day in the beginning and then less as progresses. Last sexual intercourse was 9 months ago. Negative results for STIs/STDs in the past. Denies tobacco and rec drug use. Occasionally dirnks alcohol 2x/month. Healthy diet, exercises regularly. Denies nausea, vomiting, fevers, SOB.
+# 81-year-old female with a history of emphysema (not on home O2), who presents with three days of shortness of breath thought by her primary care doctor to be a COPD flare. Two days prior to admission, she was started on a prednisone taper and one day prior to admission she required oxygen at home in order to maintain oxygen saturation greater than 90%. She has also been on levofloxacin and nebulizers, and was not getting better, and presented to the Emergency Room. In the Emergency Room, her oxygen saturation was100% on CPAP. She was not able to be weaned off of this despite nebulizer treatment and Solu-Medrol 125 mg IV x2.Review of systems is negative for the following: Fevers, chills, nausea, vomiting, night sweats, change in weight, gastrointestinal complaints, neurologic changes, rashes, palpitations, orthopnea. Is positive for the following: Chest pressure occasionally with shortness of breath with exertion, some shortness of breath that is positionally related, but is improved with nebulizer treatment.
