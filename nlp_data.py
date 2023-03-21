@@ -1,6 +1,7 @@
 import nlpcloud
 import pandas as pd
 import time
+from sklearn.model_selection import train_test_split
 
 notes = pd.read_csv('notes.csv').sample(frac = 0.1)
 
@@ -75,6 +76,12 @@ from datasets import load_dataset
 import torch
 dataset = load_dataset("json", data_files="dataset.jsonl")
 
+### Creating Validation Set ###
+dataset = dataset["train"].train_test_split(0.25, seed=42)
+split_dataset = dataset["train"].train_test_split(0.2, seed=42)
+split_dataset["validation"] = dataset["test"]
+
+
 ## Convert jsonl to json in terminal ##
 # cat dataset.jsonl | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/,/g'  | sed 's/n/,/' | sed 's/^/[/'| sed 's/$/]/' > dataset1.json
 
@@ -87,6 +94,7 @@ dataset = load_dataset("json", data_files="dataset.jsonl")
 tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
 model = GPTJForCausalLM.from_pretrained("bryanmildort/gpt-clinical-notes-summarizer", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, load_in_8bit=True
 )
+
 
 ### GPT-2XL ###
 # tokenizer = GPT2Tokenizer.from_pretrained('gpt2-xl')
@@ -130,13 +138,13 @@ for i in range(len(model.transformer.h)):
 # tokenizer = AutoTokenizer.from_pretrained("bvanaken/CORe-clinical-outcome-biobert-v1")
 # model = BertForMaskLM.from_pretrained("bvanaken/CORe-clinical-outcome-biobert-v1", is_decoder=True)
 
+from transformers import MegatronBertModel, BertTokenizer
 
 column_names = dataset["train"].column_names
 preprocessing_num_workers = None
 
 def tokenize_function(examples):
-    return tokenizer(examples["prompt"], examples["completion"], padding=True, truncation=True, max_length=2048)
-
+    return tokenizer(examples["PARSED"], examples["Hypoglycemia"], padding=True, truncation=True, max_length=512)
 
 if tokenizer.pad_token is None:
     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
@@ -201,14 +209,12 @@ tokenizer.save_vocabulary('./gpt_jt')
 #     predictions = np.argmax(logits, axis=-1)
 #     return metric.compute(predictions=predictions, references=labels)
 
-# gsutil -m cp -R D:/step/step_383500 gs://gpt-j6b 
+# gsutil -m cp -R gs://notes-nlp/NOTEEVENTS.csv .
 
 from transformers import GPTNeoXForCausalLM, AutoTokenizer, AutoModel, BertLMHeadModel
 
 # model = AutoModel.from_pretrained("healx/gpt-2-pubmed-medium")
 # tokenizer = AutoTokenizer.from_pretrained("healx/gpt-2-pubmed-medium")
-
-
 
 # model = GPTNeoXForCausalLM.from_pretrained(
 #   "EleutherAI/pythia-2.8b-deduped",
@@ -310,7 +316,28 @@ for i in notes_list:
         f.write('\n\n##########\n\n')
 
 # du -a | sort -n -r | head -n 50
-rm 
+
+#### GOOGLE COLAB TERMINAL ####
+# !pip install colab-xterm
+# %load_ext colabxterm
+# %xterm
+
+########### AMAZON EC2 PREP ############
+#### Disk Partition ####
+# lsblk
+# sudo parted /dev/nvme1n1
+# mklabel gpt
+# unit GB
+# mkpart primary ext2 0.0GB 558.8GB
+# print
+# quit
+# sudo mkfs.ext4 /dev/nvme1n1
+# sudo mkdir ./store
+# sudo vim /etc/fstab # add: /dev/nvme1n1 /home/ec2-user/store ext4 defaults 0 0
+# sudo mount ./store
+# sudo chmod 777 ./store
+# sudo chown -R $USER:$USER ./store
+
 # rm -rf ./anaconda3/envs/amazonei_pytorch_latest_p37
 # rm -rf ./anaconda3/envs/amazonei_pytorch_latest_p37/tensorflow2_p310
 # rm -rf ./anaconda3/envs/tensorflow2_p310
@@ -587,3 +614,55 @@ def summarize_function(notes):
 # The task is to generate a short summary of the given clinical notes. Do not repeat the notes verbatim.
 # 20 y/o female c/o abdominal pain. Onset was 8-10 hours ago in the right lower quadrant without radiation. Started as 4/10 and is now 5/10, constant,dull, achy, and cramping in nature. Tried Ibuprofen for the pain which helped a little. Walking makes the pain worse. Associated with 4-5 episodes of non-bloody, non-mucoid diarrhea every day for the past 2-3 days. Has had similar episodes in the past that occur randomly, this episode is the worst. No precipitating factors. Denies past medical conditions, allergies, meds, surgeries, travel history, trauma. No family history of diseases. OB/GYN: menarche at 13, regular periods each month, LMP 2 weeks ago, uses 4 pads/day in the beginning and then less as progresses. Last sexual intercourse was 9 months ago. Negative results for STIs/STDs in the past. Denies tobacco and rec drug use. Occasionally dirnks alcohol 2x/month. Healthy diet, exercises regularly. Denies nausea, vomiting, fevers, SOB.
 # 81-year-old female with a history of emphysema (not on home O2), who presents with three days of shortness of breath thought by her primary care doctor to be a COPD flare. Two days prior to admission, she was started on a prednisone taper and one day prior to admission she required oxygen at home in order to maintain oxygen saturation greater than 90%. She has also been on levofloxacin and nebulizers, and was not getting better, and presented to the Emergency Room. In the Emergency Room, her oxygen saturation was100% on CPAP. She was not able to be weaned off of this despite nebulizer treatment and Solu-Medrol 125 mg IV x2.Review of systems is negative for the following: Fevers, chills, nausea, vomiting, night sweats, change in weight, gastrointestinal complaints, neurologic changes, rashes, palpitations, orthopnea. Is positive for the following: Chest pressure occasionally with shortness of breath with exertion, some shortness of breath that is positionally related, but is improved with nebulizer treatment.
+
+####################
+
+python megatron_gpt_eval.py gpt_model_file=MegatronBERT.nemo server=True
+
+import json
+import requests
+
+port_num = 5555
+headers = {"Content-Type": "application/json"}
+
+def request_data(data):
+    resp = requests.put('http://localhost:{}/generate'.format(port_num),
+                        data=json.dumps(data),
+                        headers=headers)
+    sentences = resp.json()['sentences']
+    return sentences
+
+
+data = {
+    "sentences": ["Tell me an interesting fact about space travel."]*1,
+    "tokens_to_generate": 50,
+    "temperature": 1.0,
+    "add_BOS": True,
+    "top_k": 0,
+    "top_p": 0.9,
+    "greedy": False,
+    "all_probs": False,
+    "repetition_penalty": 1.2,
+    "min_tokens_to_generate": 2,
+}
+
+sentences = request_data(data)
+print(sentences)
+
+37 yo m with a pmh of sinus [MASK] s/p septal surgery and gerd who presented to the ed from clinic with fevers. he reports that he thought he had a uri for the last 3-4 days. then last night he developed high fevers and fatigue. sunday he began feeling as if he had a cold then monday began feeling achy this progressed on teusday and then teusday night he began having shaking chills and back pain. he went to see his pcp's office today. they noted a temperature of 102 and pleuritic chest pain and sent him to the ed for further work up because he was so ill appearing. he also notes a sore throat and productive cough with clear sputum, chills and rigors last night and pleuritic right chest pain. he had some nausea and dizziness as well. in the ed, his initial vital signs were t 98.9, hr 94, bp 96/54, rr 17, o2sat 100. he had a cxr which suggested rll pneumonia. he was ordered for levofloxacin, ceftriaxone and vancomycin as the ed was concerned over community acquired mrsa pneumonia given question of preceeding viral syndrome. lactate was elevated to 2.6; therefore, he was given 3l ns. however, his bps continued to drift to the low 90s when ivf were stopped. thus he is admitted to the hospital unit 1 for further managment. he denies n/v/d, numbness, tingling, and shortness of breath. he does complain of decreased urine output. review of systems is otherwise negative.
+
+
+from transformers import pipeline
+
+oracle = pipeline("zero-shot-classification", model="./")
+oracle(
+    "37 yo m with a pmh of sinus headaches s/p septal surgery and gerd who presented to the ed from clinic with fevers. he reports that he thought he had a uri for the last 3-4 days. then last night he developed high fevers and fatigue. sunday he began feeling as if he had a cold then monday began feeling achy this progressed on teusday and then teusday night he began having shaking chills and back pain. he went to see his pcp's office today. they noted a temperature of 102 and pleuritic chest pain and sent him to the ed for further work up because he was so ill appearing. he also notes a sore throat and productive cough with clear sputum, chills and rigors last night and pleuritic right chest pain. he had some nausea and dizziness as well. in the ed, his initial vital signs were t 98.9, hr 94, bp 96/54, rr 17, o2sat 100. he had a cxr which suggested rll pneumonia. he was ordered for levofloxacin, ceftriaxone and vancomycin as the ed was concerned over community acquired mrsa pneumonia given question of preceeding viral syndrome. lactate was elevated to 2.6; therefore, he was given 3l ns. however, his bps continued to drift to the low 90s when ivf were stopped. thus he is admitted to the hospital unit 1 for further managment. he denies n/v/d, numbness, tingling, and shortness of breath. he does complain of decreased urine output. review of systems is otherwise negative.",
+    candidate_labels=["head", "chest", "abdomen", "extremities", "other"],
+)
+
+oracle(
+    "I have a problem with my iphone that needs to be resolved asap!!",
+    candidate_labels=["english", "german"],
+)
+
+from transformers import GPTN
